@@ -1,0 +1,151 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+void swap(int* xp, int* yp);
+int binarySearch(int options[], int x, int low, int high);
+void bubbleSort(int options[], int n);
+int main (int argc, char* argv[])
+{
+    string filename= "random5000.txt";
+    FILE* file = fopen(filename, "r");
+    if (!file)
+    {
+        printf("\n Unable to open : %s", filename);
+        return -1;
+    }
+    char line[5];
+    char options[5000][4];
+    static int number[5000];
+    for (int i=0; i<5000; i++)
+    {
+        fscanf(file, "%s", options[i]);
+        //printf("%s \n", options[i]);
+    }
+    fclose(file);
+    int number= get_int("what is the number you provide:");
+    for (int j =0; j<5000; j++)
+    {
+        int f= atoi(options[j]);
+        if ( f==number)
+        {
+            printf("the location of the number is %i\n", j);
+            break;
+        }
+    }
+    bubbleSort(options,x,low,high);
+
+    return 0;
+}
+
+
+//int binarySearch(int options[], int x, int low, int high)
+{
+  if (high >= low)
+  {
+    int mid = low + (high - low) / 2;
+
+    if (options[mid] == x)
+      return mid;
+
+    if (options[mid] > x)
+      return binarySearch(options, x, low, mid - 1);
+
+    return binarySearch(options, x, mid + 1, high);
+  }
+
+  return -1;
+}
+
+
+
+void swap(int* xp, int* yp)
+{
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
+
+void bubbleSort(int options[], int n)
+{
+    int i, j;
+    bool swapped;
+    for (i = 0; i < n - 1; i++) {
+        swapped = false;
+        for (j = 0; j < n - i - 1; j++) {
+            if (options[j] > arr[j + 1]) {
+                swap(&options[j], &options[j + 1]);
+                swapped = true;
+            }
+        }
+
+
+        if (swapped == false)
+            break;
+    }
+}
+
+void printArray(int options[], int size)
+{
+    int i;
+    for (i = 0; i < size; i++)
+        printf("%d ", arr[i]);
+}
+
+arrayint 0 return a index, linear pr
+
+{fclose(file);
+int*array;
+array=readfile(filename, 10000,5);
+int guess= get_int ("give me a number in between:");
+int indx= linearSearch(array, guess. SIZE2);
+printf("the index is %i \n", index);
+int *sorted= selectSort(array);
+printfArray(sort, SIZE2)
+}
+
+int selectionsort(int, array[])
+{
+    for(int i=0; i<SIZE2; i++)
+    {
+        int min= SIZE2+1;
+        for(int j=i; i<SIZE2; j++)
+        {
+            if(array[j]<min)
+            {
+                min= array[j];
+                indx=j;
+            }
+        }
+        int temp=array[i];
+        array[i]=min;
+        array[indx]=temp;
+    }
+}return array;
+
+void printArray(int array[], int size)
+{
+    for(int i=0; i<size; i++)
+    {
+        printf("%i \n",array[i]);
+    }
+}
+{fclose(file);
+int*array;
+array=readfile(filename, 10000,5);
+int guess= get_int ("give me a number in between:");
+int indx= linearSearch(array, guess. SIZE2);
+printf("the index is %i \n", index);
+int *sorted= selectSort(array);
+printfArray(sort, SIZE2)
+}
+make txt
+mylock( )
+if (i>0; )
+{
+    case'1'= bubbleSort;
+    case'2'= Linearsearch;
+    case'3'=BinarySearch;
+}
